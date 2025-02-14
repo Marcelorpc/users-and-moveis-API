@@ -5,8 +5,8 @@ const createUsers = `
     email VARCHAR,
     password VARCHAR,
     avatar VARCHAR NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMPT DEFAULT CURRENT_TIMESTAMP
+    created_at DATETIME DEFAULT (DATETIME('now', 'localtime')),
+    updated_at DATETIME DEFAULT (DATETIME('now', 'localtime'))
   )
 `
 export default createUsers;
